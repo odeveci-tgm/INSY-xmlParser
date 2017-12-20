@@ -9,7 +9,12 @@ import org . w3c . dom . Node ;
 import org . w3c . dom . NodeList ;
 import org . xml . sax . SAXException ;
 import org . xml . sax . SAXParseException ;
-
+/**
+ * Eine Klasse, welche xml-Files geordnet aufbereitet und in der Konsole zurückgibt.
+ * @author osman
+ * @since 20.12.2017
+ * @version 1.0
+ */
 public class XMLparser {
 
 	public static void main(String[] args) {
@@ -36,23 +41,28 @@ public class XMLparser {
 		String categoryarr[] = new String [10];
 		String languagearr[] = new String [10];
 		int counter=1;
+		
+		//Alle benötigten Elemente werden im xml-File herausgesucht und unter einer NodeList gespeichert
 		NodeList x = doc . getElementsByTagName ("title");
 		NodeList x2 = doc . getElementsByTagName ("author");
 		NodeList x3= doc . getElementsByTagName ("year");
 		NodeList x4 = doc . getElementsByTagName ("price");
 		
+		
 		for (int i =0; i < x. getLength () ; i ++) {
+		//In einer Schleife werden alle  einzelnen Elemente nun von der Liste geholt und unter einer Node gespeichert
 		Node title = x. item (i);
 		Node author = x2.item(i);
 		Node year = x3.item(i);
 		Node price = x4.item(i);
 	
-		
+		//Der Text zwischen den Elementen wird geholt und Whitespaces am Anfang und Ende gelöscht
 		String contentT = title . getTextContent().trim();
 		String contentA = author . getTextContent().trim();
 		String contentY = year . getTextContent().trim();
 		String contentP = price . getTextContent().trim();
 		
+		//Alle Inhalte im zugehörigen Array des Elements gespeichert
 		titlearr[i] = contentT;
 		authorarr[i] = contentA;
 		yeararr[i] = contentY;
@@ -64,8 +74,12 @@ public class XMLparser {
 		NodeList title = doc . getElementsByTagName("title");
 		for (int i=0;i<book.getLength();i++) {
 			//System.out.println(titlearr[i]);
+					
+					//If-Statement ist true, falls das Element ein Attribut besitzt
 					if( book .item(i).getNodeType () == Node . ELEMENT_NODE ) {
 					NamedNodeMap bookAttribute = book .item(i).getAttributes () ;
+					
+					//Attribute von book und title (category und lang) werden herausgeholt und dessen Inhalt erneut in einem Array gespeichert 
 					Node bookAttribut =
 					bookAttribute . getNamedItem ("category") ;
 					String category =bookAttribut.getTextContent();
@@ -80,6 +94,7 @@ public class XMLparser {
 		
 		
 		for (int i=0;i<titlearr.length;i++) {
+			//Arrays werden nun verwendet um die Bücher und dessen Elemente nacheinander in einer Liste zu printen
 			System.out.println("Book"+counter+"\n Title:"+titlearr[i]+"\n Author:"+authorarr[i]+"\n Year:"+yeararr[i]+"\n Price:"+pricearr[i]+" \n"
 			+ " Language:"+languagearr[i]+"\n Category:"+categoryarr[i]+"\n");
 			counter++;
