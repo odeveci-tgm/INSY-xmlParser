@@ -11,7 +11,7 @@ class XMLParser():
         doc = et.parse(self.filename)
         #print(et.tostring(doc.getroot()).decode('utf-8'))
         print("Weclome to the bookstore!")
-        count=0
+        count=1
         #Alle <book> ... </book> Elemente, also jedes Buch-Element, werden durchiteriert
         for element in doc.findall("book"):
             #Alle Strings in Kindeselementen von <book> werden herausgehoben mit find().text  , mit strip() werden Whitespaces am Anfang und Ende des Strings entfernt.
