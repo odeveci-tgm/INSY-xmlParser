@@ -1,0 +1,76 @@
+
+<bookstore>
+
+<book category ="cooking">
+<title lang ="en">Everyday Italian</title>
+<author>Giada De Laurentiis</author>
+<year>2005</year>
+<price>30.00</price>
+</book>
+
+<book category ="story">
+<title lang ="tr">Mutluluk</title>
+<author> Ossi Deveci </author>
+<year>2010</year>
+<price>11.00</price>
+</book>
+
+
+<book category ="history">
+<title lang ="de">Messners Kampf</title>
+<author>Der Messner</author>
+<year>2000 </year>
+<price>5.00 </price>
+</book>
+
+<book category ="lifestyle">
+<title lang ="en"> Sheesh </title>
+<author> Osman King </author>
+<year>2016 </year>
+<price>1.00 </price>
+</book>
+
+<book category ="help">
+<title lang ="de"> Babo sein 101 </title>
+<author> Messner Kid </author>
+<year> 1989 </year>
+<price>30.00 </price>
+</book>
+
+<book category ="education">
+<title lang ="de"> Wirtschaft und Recht </title>
+<author> Karl Marx </author>
+<year>1990 </year>
+<price>9.00 </price>
+</book>
+
+<book category ="education">
+<title lang ="en"> Learn English </title>
+<author> Connor McGregor </author>
+<year>2016 </year>
+<price>22.00 </price>
+</book>
+
+<book category ="story">
+<title lang ="de"> Max und sein Hund </title>
+<author> Sami Torkamani </author>
+<year>2002 </year>
+<price>15.00 </price>
+</book>
+
+<book category ="education">
+<title lang ="tr"> Almanca senin icin </title>
+<author> Mehmet Mehmedi </author>
+<year>1999 </year>
+<price>18.00 </price>
+</book>
+
+<book category ="education">
+<title lang ="de"> Der Kapitalismus </title>
+<author> Albert Einstein </author>
+<year>1998 </year>
+<price>2.00 </price>
+</book>
+
+
+</bookstore>
